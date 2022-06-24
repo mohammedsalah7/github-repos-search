@@ -5,7 +5,7 @@ export const ReposContext = createContext();
 const ReposProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [comparisonResuls, setComparisonResuls] = useState([]);
+  const [comparisonResults, setComparisonResults] = useState([]);
   const [loeder , setLoeder]=useState(false)
 
   const handleSearch = (e) => {
@@ -19,6 +19,12 @@ const ReposProvider = ({ children }) => {
         setLoeder(false)
       });
   }; 
+
+   const handleComparisonResults=(comparisonId)=>{
+    const filterResults= results.filter((items)=> items.id === comparisonId)
+    setComparisonResults([...comparisonResults,filterResults])
+
+   }
   return (
     <ReposContext.Provider
       value={{
@@ -27,9 +33,10 @@ const ReposProvider = ({ children }) => {
         searchValue,
         setSearchValue,
         handleSearch,
-        comparisonResuls,
-        setComparisonResuls,
-        loeder
+        comparisonResults,
+        setComparisonResults,
+        loeder,
+        handleComparisonResults
       }}
     >
       {children}
