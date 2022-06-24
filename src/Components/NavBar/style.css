@@ -1,0 +1,27 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 1px 8px #ddd;
+}
+
+#nav-title {
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+.link {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease 0s;
+}
+
+ 
+  .link:hover {
+    color: #b2dfdb;
+}
