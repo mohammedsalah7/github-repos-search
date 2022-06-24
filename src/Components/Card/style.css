@@ -1,0 +1,92 @@
+.main {
+    background-color: transparent;
+
+}
+
+.parent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 10px;
+
+
+}
+
+.card {
+    position: relative;
+    display: flex;
+    height: 330px;
+    width: 220px;
+    margin: 5px;
+    background-color: #191c29;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid rgb(88 199 250);
+    overflow: hidden;
+    transition: .6s;
+    box-shadow: 0px 0px 100px rgba(88, 199, 250, .15);
+
+
+}
+
+
+.text2 {
+    color: #dbf9ff;
+    font-family: roboto;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 25px;
+    background-color: #191c29;
+    transition: .7s;
+
+}
+
+
+.text1 {
+    position: relative;
+    font-size: 33px;
+    font-family: roboto;
+    color: rgb(88 199 250);
+    font-weight: 100;
+    letter-spacing: 1px;
+    transition: .7s;
+    transform: translateY(110px);
+    background-color: #191c29;
+
+
+}
+
+h2 {
+    font-size: 24px;
+    font-family: roboto;
+    color: rgb(88 199 250);
+    font-weight: 400;
+    margin: 0;
+    background-color: #191c29;
+    padding: 0;
+
+
+}
+
+.btn-add {
+    width: 110px;
+    height: 38px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-family: roboto;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #0beef9;
+    background-image: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
+    border: none;
+    cursor: pointer
+}
+
