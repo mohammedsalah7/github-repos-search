@@ -1,10 +1,14 @@
 import React from 'react';
-
+import "./style.css";
 const Search = () => {
     return (
-        <div>
-            Search Component
-        </div>
+        <section className="container-search">
+        <form>		    
+            <input type="search" placeholder="What are you looking for?"/>		    	
+            <button>Search</button>
+        </form>
+    </section>
+
     );
 }
 
