@@ -22,9 +22,18 @@ const ReposProvider = ({ children }) => {
 
    const handleComparisonResults=(comparisonId)=>{
     const filterResults= results.filter((items)=> items.id === comparisonId)
-    setComparisonResults([...comparisonResults,filterResults])
+    setComparisonResults([...comparisonResults,filterResults[0]])
 
-   }
+   } 
+
+
+
+   const handleDeleteRepo = (comparisonId) => {
+    let filterResults = comparisonResults.filter((item) => {
+      return item.id !== comparisonId;
+    });
+    setComparisonResults(filterResults);
+  };
   return (
     <ReposContext.Provider
       value={{
@@ -36,7 +45,8 @@ const ReposProvider = ({ children }) => {
         comparisonResults,
         setComparisonResults,
         loeder,
-        handleComparisonResults
+        handleComparisonResults,
+        handleDeleteRepo
       }}
     >
       {children}

@@ -4,4 +4,11 @@
     font-family: Arial, Helvetica;
     color: white;
     background: #212534
+} 
+
+.parents{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }

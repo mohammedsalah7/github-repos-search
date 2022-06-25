@@ -3,8 +3,7 @@ import { ReposContext } from "../../Context";
 import Spinner from "../Spinner";
 import "./style.css";
 const Card = () => {
-  const { results, loeder,handleComparisonResults } = useContext(ReposContext);
- 
+  const { results, loeder, handleComparisonResults } = useContext(ReposContext);
 
   return (
     <div className="parent">
@@ -18,7 +17,14 @@ const Card = () => {
                 <h2>{items.full_name}</h2>
                 <div className="text2">{items.description}</div>
                 <h1>{items.language}</h1>
-                <button className="btn-add" onClick={()=>{handleComparisonResults(items.id)}}>Add </button>
+                <button
+                  className="btn-add"
+                  onClick={() => {
+                    handleComparisonResults(items.id);
+                  }}
+                >
+                  Add{" "}
+                </button>
               </div>
             </div>
           );
